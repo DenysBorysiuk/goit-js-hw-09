@@ -3,6 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
+  inputDate: document.querySelector('#datetime-picker'),
   startBtn: document.querySelector('button[data-start]'),
   days: document.querySelector('span[data-days]'),
   hours: document.querySelector('span[data-hours]'),
@@ -40,12 +41,13 @@ const timer = {
   },
 };
 
-flatpickr('#datetime-picker', options);
+flatpickr(refs.inputDate, options);
 refs.startBtn.addEventListener('click', onClickStart);
 
 function onClickStart() {
   timer.start();
   refs.startBtn.disabled = true;
+  refs.inputDate.disabled = true;
 }
 
 function convertMs(ms) {
