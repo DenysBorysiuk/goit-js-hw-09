@@ -17,6 +17,20 @@ img {
   max-width: 100%;
 }
 
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.bg-switcher-btn {
+  padding: 15px 25px;
+
+  font-size: 30px;
+  border: none;
+  border-radius: 50px;
+}
+
 #datetime-picker {
   display: block;
   margin-left: auto;
