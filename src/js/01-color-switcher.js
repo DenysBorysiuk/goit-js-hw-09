@@ -11,7 +11,7 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function onClickStart(evt) {
+function onClickStart() {
   refs.btnStart.disabled = true;
   refs.btnStop.disabled = false;
   timerId = setInterval(
@@ -20,7 +20,7 @@ function onClickStart(evt) {
   );
 }
 
-function onClickStop(evt) {
+function onClickStop() {
   refs.btnStart.disabled = false;
   refs.btnStop.disabled = true;
   clearInterval(timerId);
