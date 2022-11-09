@@ -37,7 +37,6 @@ const timer = {
       const deltaTime = endTime - currentTime;
       const timeComponents = convertMs(deltaTime);
       udateClockFace(timeComponents);
-      console.log(timeComponents);
     }, 1000);
   },
 };
@@ -47,6 +46,7 @@ refs.startBtn.addEventListener('click', onClickStart);
 
 function onClickStart() {
   timer.start();
+  refs.startBtn.disabled = true;
 }
 
 function convertMs(ms) {
