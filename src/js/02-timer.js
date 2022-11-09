@@ -28,8 +28,6 @@ const options = {
   },
 };
 
-const pickr = flatpickr('#datetime-picker', options);
-
 const timer = {
   start() {
     const endTime = selectedDate.getTime();
@@ -44,6 +42,7 @@ const timer = {
   },
 };
 
+flatpickr('#datetime-picker', options);
 refs.startBtn.addEventListener('click', onClickStart);
 
 function onClickStart() {
@@ -81,11 +80,3 @@ function udateClockFace({ days, hours, minutes, seconds }) {
   refs.minutes.textContent = minutes;
   refs.seconds.textContent = seconds;
 }
-// e.g. Only message
-// Notiflix.Notify.success('Sol lucet omnibus');
-
-// Notiflix.Notify.failure('Qui timide rogat docet negare');
-
-// Notiflix.Notify.warning('Memento te hominem esse');
-
-// Notiflix.Notify.info('Cogito ergo sum');
