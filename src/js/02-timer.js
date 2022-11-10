@@ -31,12 +31,15 @@ const options = {
 const timer = {
   start() {
     const endTime = selectedDate.getTime();
-
-    setInterval(() => {
+    const int = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = endTime - currentTime;
       const timeComponents = convertMs(deltaTime);
       udateClockFace(timeComponents);
+      console.log(deltaTime);
+      if (deltaTime < 1000) {
+        clearInterval(int);
+      }
     }, 1000);
   },
 };
